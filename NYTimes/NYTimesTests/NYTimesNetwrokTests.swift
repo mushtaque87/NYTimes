@@ -9,7 +9,7 @@
 import XCTest
 @testable import NYTimes
 
-class NYTimesTests: XCTestCase {
+class NYTimesNetwrokTests: XCTestCase {
 
     var sut: HttpClient!
     override func setUp() {

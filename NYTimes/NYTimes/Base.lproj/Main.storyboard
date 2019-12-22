@@ -31,12 +31,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" id="rNO-BW-LPc">
+                                <rect key="frame" x="0.0" y="426" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="auH-c0-DOc">
                                 <rect key="frame" x="0.0" y="82.5" width="414" height="785"/>
                                 <subviews>
-                                    <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="wFl-CE-oCf">
+                                    <searchBar contentMode="redraw" placeholder="Search Articles" translatesAutoresizingMaskIntoConstraints="NO" id="wFl-CE-oCf">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="qfP-pb-cWj"/>
+                                        </connections>
                                     </searchBar>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Wy0-ji-o63">
                                         <rect key="frame" x="0.0" y="56" width="414" height="729"/>
@@ -55,10 +62,49 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="bDN-dn-2Mh"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="rNO-BW-LPc" id="l4e-B9-GhQ"/>
+                        <outlet property="articleTableView" destination="Wy0-ji-o63" id="1HY-TW-fx5"/>
+                        <outlet property="searchBar" destination="wFl-CE-oCf" id="T1J-HQ-Q6g"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-870" y="-33"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="pUx-zO-ZX4">
+            <objects>
+                <viewController storyboardIdentifier="DetailView" id="nds-7z-HMJ" customClass="DetailViewController" customModule="NYTimes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LmJ-ne-XzV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2vn-rW-vSL">
+                                <rect key="frame" x="20" y="44" width="374" height="818"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="2vn-rW-vSL" firstAttribute="width" secondItem="ZCU-DW-uos" secondAttribute="width" multiplier="0.57971" constant="134" id="3T9-dO-6fP"/>
+                            <constraint firstItem="2vn-rW-vSL" firstAttribute="height" secondItem="ZCU-DW-uos" secondAttribute="height" multiplier="0.156479" constant="690" id="8Jh-r6-HrL"/>
+                            <constraint firstItem="2vn-rW-vSL" firstAttribute="centerX" secondItem="ZCU-DW-uos" secondAttribute="centerX" id="cgv-0B-fYY"/>
+                            <constraint firstItem="2vn-rW-vSL" firstAttribute="centerY" secondItem="ZCU-DW-uos" secondAttribute="centerY" id="kHa-XW-Xds"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ZCU-DW-uos"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="2vn-rW-vSL" id="uBo-sv-Jxo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ava-nC-zLf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-182.60869565217394" y="-25.446428571428569"/>
         </scene>
     </scenes>
 </document>

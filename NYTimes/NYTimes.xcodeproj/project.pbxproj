@@ -14,13 +14,23 @@
 		6462864523ADE7C200A26F49 /* NYTimes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6462864323ADE7C200A26F49 /* NYTimes.xcdatamodeld */; };
 		6462864723ADE7C300A26F49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6462864623ADE7C300A26F49 /* Assets.xcassets */; };
 		6462864A23ADE7C300A26F49 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6462864823ADE7C300A26F49 /* LaunchScreen.storyboard */; };
-		6462865523ADE7C300A26F49 /* NYTimesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6462865423ADE7C300A26F49 /* NYTimesTests.swift */; };
+		6462865523ADE7C300A26F49 /* NYTimesNetwrokTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6462865423ADE7C300A26F49 /* NYTimesNetwrokTests.swift */; };
 		6462866223ADE88200A26F49 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6462866123ADE88200A26F49 /* HomeViewModel.swift */; };
 		6462866523AE031700A26F49 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6462866423AE031700A26F49 /* NetworkManager.swift */; };
 		6462866723AE036A00A26F49 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6462866623AE036A00A26F49 /* HTTPClient.swift */; };
 		6462866B23AE502D00A26F49 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6462866A23AE502D00A26F49 /* Constants.swift */; };
-		6462867F23AE7A2F00A26F49 /* NYTimesNetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6462867E23AE7A2F00A26F49 /* NYTimesNetworkTests.swift */; };
+		6462867F23AE7A2F00A26F49 /* NYTimesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6462867E23AE7A2F00A26F49 /* NYTimesViewModelTests.swift */; };
 		6462868123AE886B00A26F49 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6462868023AE886B00A26F49 /* Environment.swift */; };
+		6462868C23AE914D00A26F49 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6462868323AE914C00A26F49 /* Response.swift */; };
+		6462868E23AE914D00A26F49 /* Docs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6462868523AE914C00A26F49 /* Docs.swift */; };
+		6462868F23AE914D00A26F49 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6462868623AE914C00A26F49 /* Article.swift */; };
+		6462869123AE914D00A26F49 /* Headline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6462868823AE914C00A26F49 /* Headline.swift */; };
+		647555BE23AF4DE200798F8F /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647555BC23AF4DE200798F8F /* ArticleTableViewCell.swift */; };
+		647555BF23AF4DE200798F8F /* ArticleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 647555BD23AF4DE200798F8F /* ArticleTableViewCell.xib */; };
+		647555C323AF515A00798F8F /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647555C223AF515A00798F8F /* DataManager.swift */; };
+		647555C623AF811F00798F8F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647555C423AF811F00798F8F /* DetailViewController.swift */; };
+		647555CC23AF986700798F8F /* Meta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647555CB23AF986700798F8F /* Meta.swift */; };
+		647555CE23AF9B3C00798F8F /* NYTimesDataManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647555CD23AF9B3C00798F8F /* NYTimesDataManagerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,14 +54,24 @@
 		6462864923ADE7C300A26F49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6462864B23ADE7C300A26F49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6462865023ADE7C300A26F49 /* NYTimesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NYTimesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6462865423ADE7C300A26F49 /* NYTimesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYTimesTests.swift; sourceTree = "<group>"; };
+		6462865423ADE7C300A26F49 /* NYTimesNetwrokTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYTimesNetwrokTests.swift; sourceTree = "<group>"; };
 		6462865623ADE7C300A26F49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6462866123ADE88200A26F49 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		6462866423AE031700A26F49 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		6462866623AE036A00A26F49 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		6462866A23AE502D00A26F49 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		6462867E23AE7A2F00A26F49 /* NYTimesNetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYTimesNetworkTests.swift; sourceTree = "<group>"; };
+		6462867E23AE7A2F00A26F49 /* NYTimesViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYTimesViewModelTests.swift; sourceTree = "<group>"; };
 		6462868023AE886B00A26F49 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		6462868323AE914C00A26F49 /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		6462868523AE914C00A26F49 /* Docs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Docs.swift; sourceTree = "<group>"; };
+		6462868623AE914C00A26F49 /* Article.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		6462868823AE914C00A26F49 /* Headline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Headline.swift; sourceTree = "<group>"; };
+		647555BC23AF4DE200798F8F /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
+		647555BD23AF4DE200798F8F /* ArticleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleTableViewCell.xib; sourceTree = "<group>"; };
+		647555C223AF515A00798F8F /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		647555C423AF811F00798F8F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		647555CB23AF986700798F8F /* Meta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meta.swift; sourceTree = "<group>"; };
+		647555CD23AF9B3C00798F8F /* NYTimesDataManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYTimesDataManagerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +113,8 @@
 		6462863923ADE7C200A26F49 /* NYTimes */ = {
 			isa = PBXGroup;
 			children = (
+				647555C823AF828C00798F8F /* Extensions */,
+				647555BB23AF4DBB00798F8F /* UITableViewCell */,
 				6462866923AE501E00A26F49 /* Commons */,
 				6462866823AE03ED00A26F49 /* Models */,
 				6462866323AE02F900A26F49 /* Services */,
@@ -112,8 +134,9 @@
 		6462865323ADE7C300A26F49 /* NYTimesTests */ = {
 			isa = PBXGroup;
 			children = (
-				6462865423ADE7C300A26F49 /* NYTimesTests.swift */,
-				6462867E23AE7A2F00A26F49 /* NYTimesNetworkTests.swift */,
+				6462865423ADE7C300A26F49 /* NYTimesNetwrokTests.swift */,
+				6462867E23AE7A2F00A26F49 /* NYTimesViewModelTests.swift */,
+				647555CD23AF9B3C00798F8F /* NYTimesDataManagerTests.swift */,
 				6462865623ADE7C300A26F49 /* Info.plist */,
 			);
 			path = NYTimesTests;
@@ -123,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				6462863E23ADE7C200A26F49 /* HomeViewController.swift */,
+				647555C423AF811F00798F8F /* DetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -147,6 +171,8 @@
 		6462866823AE03ED00A26F49 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				647555C123AF513E00798F8F /* DataManager */,
+				647555C023AF512B00798F8F /* Articles */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -158,6 +184,42 @@
 				6462868023AE886B00A26F49 /* Environment.swift */,
 			);
 			path = Commons;
+			sourceTree = "<group>";
+		};
+		647555BB23AF4DBB00798F8F /* UITableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				647555BC23AF4DE200798F8F /* ArticleTableViewCell.swift */,
+				647555BD23AF4DE200798F8F /* ArticleTableViewCell.xib */,
+			);
+			path = UITableViewCell;
+			sourceTree = "<group>";
+		};
+		647555C023AF512B00798F8F /* Articles */ = {
+			isa = PBXGroup;
+			children = (
+				647555CB23AF986700798F8F /* Meta.swift */,
+				6462868623AE914C00A26F49 /* Article.swift */,
+				6462868523AE914C00A26F49 /* Docs.swift */,
+				6462868823AE914C00A26F49 /* Headline.swift */,
+				6462868323AE914C00A26F49 /* Response.swift */,
+			);
+			path = Articles;
+			sourceTree = "<group>";
+		};
+		647555C123AF513E00798F8F /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				647555C223AF515A00798F8F /* DataManager.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		647555C823AF828C00798F8F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,6 +303,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				647555BF23AF4DE200798F8F /* ArticleTableViewCell.xib in Resources */,
 				6462864A23ADE7C300A26F49 /* LaunchScreen.storyboard in Resources */,
 				6462864723ADE7C300A26F49 /* Assets.xcassets in Resources */,
 				6462864223ADE7C200A26F49 /* Main.storyboard in Resources */,
@@ -261,12 +324,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6462868F23AE914D00A26F49 /* Article.swift in Sources */,
+				647555C323AF515A00798F8F /* DataManager.swift in Sources */,
+				6462868E23AE914D00A26F49 /* Docs.swift in Sources */,
+				6462869123AE914D00A26F49 /* Headline.swift in Sources */,
+				647555C623AF811F00798F8F /* DetailViewController.swift in Sources */,
 				6462866523AE031700A26F49 /* NetworkManager.swift in Sources */,
 				6462866223ADE88200A26F49 /* HomeViewModel.swift in Sources */,
+				647555CC23AF986700798F8F /* Meta.swift in Sources */,
 				6462863F23ADE7C200A26F49 /* HomeViewController.swift in Sources */,
+				647555BE23AF4DE200798F8F /* ArticleTableViewCell.swift in Sources */,
 				6462866723AE036A00A26F49 /* HTTPClient.swift in Sources */,
 				6462868123AE886B00A26F49 /* Environment.swift in Sources */,
 				6462864523ADE7C200A26F49 /* NYTimes.xcdatamodeld in Sources */,
+				6462868C23AE914D00A26F49 /* Response.swift in Sources */,
 				6462863B23ADE7C200A26F49 /* AppDelegate.swift in Sources */,
 				6462863D23ADE7C200A26F49 /* SceneDelegate.swift in Sources */,
 				6462866B23AE502D00A26F49 /* Constants.swift in Sources */,
@@ -277,8 +348,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6462867F23AE7A2F00A26F49 /* NYTimesNetworkTests.swift in Sources */,
-				6462865523ADE7C300A26F49 /* NYTimesTests.swift in Sources */,
+				6462867F23AE7A2F00A26F49 /* NYTimesViewModelTests.swift in Sources */,
+				647555CE23AF9B3C00798F8F /* NYTimesDataManagerTests.swift in Sources */,
+				6462865523ADE7C300A26F49 /* NYTimesNetwrokTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
