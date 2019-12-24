@@ -1,2 +1,2 @@
 # NYTimes
-An iOS app showing news from New York Times 
+An iOS app showing articles from New York Times 
