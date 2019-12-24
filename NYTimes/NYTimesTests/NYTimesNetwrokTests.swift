@@ -19,6 +19,7 @@ class NYTimesNetwrokTests: XCTestCase {
         
     }
 
+    //**** You can test Network calls directly, though they will be slow so they should be kept seperately in seperate Tests. ****
     func testSearchAPI() {
         let promise = expectation(description: "Status Code: 200")
         let url =
@@ -40,6 +41,19 @@ class NYTimesNetwrokTests: XCTestCase {
             }
         }
        wait(for: [promise], timeout: 10)
+    }
+    
+    //**** You can test Network response by mocking and using stub response. ****
+    func testJsonDecoding() {
+        
+        let data = Helper.readJsonFile(at: "articles", ofType: ".json")
+        do {
+            let articles = try JSONDecoder.decodeData(data, of: Article.self)
+            print("Article \(articles)")
+        } catch  {
+            print("Throwable Error \(error)")
+            XCTFail("Throwable Error \(error)")
+        }
     }
         
     override func tearDown() {

@@ -27,20 +27,44 @@ class NYTimesDataManagerTests: XCTestCase {
     }
 
     func testAppendDoc() {
-       
-    }
-     
-    func testGetDocCount()
-    {
+       let data = Helper.readJsonFile(at: "articles", ofType: ".json")
+             do {
+                let articles : Article = try JSONDecoder.decodeData(data, of: Article.self) as! Article
+                sut.appendData(with: (articles.response?.docs)!)
+             } catch  {
+                 print("Throwable Error \(error)")
+                 XCTFail("Throwable Error \(error)")
+        }
+        XCTAssertEqual(sut.getDocCount(), 1)
         
     }
+     
     
     func testGetDoc() {
+           let data = Helper.readJsonFile(at: "articles", ofType: ".json")
+                  do {
+                     let articles : Article = try JSONDecoder.decodeData(data, of: Article.self) as! Article
+                     sut.appendData(with: (articles.response?.docs)!)
+                  } catch  {
+                      print("Throwable Error \(error)")
+                      XCTFail("Throwable Error \(error)")
+             }
+        XCTAssertNotNil(sut.getDoc(for: 0))
         
     }
     
     func testClearAllDoc() {
-        
+        let data = Helper.readJsonFile(at: "articles", ofType: ".json")
+                  do {
+                     let articles : Article = try JSONDecoder.decodeData(data, of: Article.self) as! Article
+                     sut.appendData(with: (articles.response?.docs)!)
+                  } catch  {
+                      print("Throwable Error \(error)")
+                      XCTFail("Throwable Error \(error)")
+             }
+        XCTAssertNotNil(sut.getDoc(for: 0))
+        sut.cleanAllData()
+        XCTAssertNil(sut.getDoc(for: 0))
     }
     
     func testExample() {

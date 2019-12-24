@@ -18,13 +18,15 @@ class NYTimesViewModelTests: XCTestCase {
         super.setUp()
         sut = HomeViewModel(networkManager:NetworkManager(httpClient:HttpClient(session: URLSession(configuration: URLSessionConfiguration.default))), dataManager: Datamanager())
         
-              
-              //  HttpClient(session: URLSession(configuration: .default))
     }
     
     func testUrlFormation() {
         let url = sut.generateURL(with: "Singapore Airlines")
         XCTAssertEqual(url, URL(string: "https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=fxUVDH9wKLwHUheA1OBZKY9zXxa15yvM&q=Singapore%20Airlines&page=0"), "String didnt Match")
+    }
+    
+    func testSearch() {
+        sut.search(for: "Singapore")
     }
    
 

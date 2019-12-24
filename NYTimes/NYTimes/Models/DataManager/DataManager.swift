@@ -19,9 +19,8 @@ struct CurrentDoc {
 }
 
 protocol DataDelegate {
-//    associatedtype A
+
     associatedtype D
-//    init(with articles: A)
     var docs : [D] {get set}
     func appendData(with data:[D])
     func cleanAllData()
@@ -36,28 +35,21 @@ protocol DataDelegate {
 class Datamanager : NSObject , DataDelegate {
   
     
-
-//    typealias A = Article
     typealias D = Docs
-    
     var docs = [Docs]()
-//    var article : Article?
-    
     var currentIndex = 0
     
     override init() {
         super.init()
     }
-//    required  init(with article: Article) {
-//        self.article = article
-//    }
+
     
     func appendData(with data: [Docs]) {
         self.docs.append(contentsOf: data)
     }
     
     func getDoc(for index:Int) -> D? {
-        guard (0...self.docs.count).contains(index) else {
+        guard (0..<self.docs.count).contains(index) else {
             return nil
         }
         return self.docs[index]

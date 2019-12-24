@@ -1,0 +1,23 @@
+
+{
+    "status": "OK",
+    "copyright": "Copyright (c) 2019 The New York Times Company. All Rights Reserved.",
+    "response": {
+        "docs": [{
+            "abstract": "For decades, Singapore Airlines has pushed boundaries as a world-class carrier and trailblazer in flight innovation.",
+            "web_url": "https://www.nytimes.com/paidpost/singapore-airlines/a-contemporary-portrait-of-a-singapore-icon.html",
+            "snippet": "For decades, Singapore Airlines has pushed boundaries as a world-class carrier and trailblazer in flight innovation.",
+            "lead_paragraph": "Hello",
+            "headline": {
+                "main": "A Contemporary Portrait of a Singapore Icon"
+            },
+            "keywords": [{
+                "name": "organizations",
+                "value": "Singapore Airlines",
+                "rank": 1,
+                "major": "N"
+            }],
+            "section_name": "T Brand"
+        }]
+    }
+}

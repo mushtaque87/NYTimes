@@ -28,27 +28,16 @@ class NetworkManager : NSObject , SearchDelegate {
         
           httpClient.get(url: url) { (data , response , error) in
             
-             if (response as? HTTPURLResponse)?.statusCode == 200 {
-                do {
-                    let content : Article = try JSONDecoder().decode(Article.self, from: data!)
-                    if let docs = content.response?.docs {
-                                  successCompletionHandler(docs)
-                                }
-                            }
-                            catch let DecodingError.dataCorrupted(context) {
-                                print("Context:  \(context.debugDescription)")
-                            } catch let DecodingError.keyNotFound(key, context) {
-                               print("Key: \(key) context:  \(context.debugDescription)")
-                            } catch let DecodingError.valueNotFound(value, context) {
-                               print("Value: \(value) context:  \(context.debugDescription)")
-                            } catch let DecodingError.typeMismatch(type, context)  {
-                               print("Type: \(type) context:  \(context.debugDescription)")
-                            }
-                            catch {
-                                print("HTTP error: \(error.localizedDescription)")
-                            }
-            }
+            do {
+                let articles : Article = try JSONDecoder.decodeData(data, of: Article.self) as! Article
+                    if let docs = articles.response?.docs {
+                                                  successCompletionHandler(docs)
+                        }
+                   } catch  {
+                       print("Throwable Error \(error)")
+                     
+                   }
         }
-    }
     
+    }
 }
