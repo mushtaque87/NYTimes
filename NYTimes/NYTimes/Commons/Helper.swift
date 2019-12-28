@@ -15,7 +15,7 @@ final public class Helper: NSObject {
         do {
             if let file = Bundle.main.url(forResource: path, withExtension: type) {
                 data = try Data(contentsOf: file)
-               
+                
                 let json = try JSONSerialization.jsonObject(with: data!, options: [])
                 if json is [String: Any] {
                     // json is a dictionary

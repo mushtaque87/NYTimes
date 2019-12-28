@@ -19,8 +19,8 @@ class HomeViewController: UIViewController , HomeVCDelegate  {
     @IBOutlet weak var articleTableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-
-    let viewModel = HomeViewModel(networkManager:NetworkManager(httpClient:HttpClient(session: URLSession(configuration: URLSessionConfiguration.default))),
+    
+    var viewModel = HomeViewModel(networkManager:NetworkManager(httpClient:HttpClient(session: URLSession(configuration: URLSessionConfiguration.default))),
                                   dataManager: Datamanager())
     
     override func viewDidLoad() {
@@ -35,21 +35,21 @@ class HomeViewController: UIViewController , HomeVCDelegate  {
     }
     
     func search(for text: String) {
-            activityIndicator.startAnimating()
-            viewModel.search(for: text)
-       }
-       
-       func showDetailPageVC(_ doc:CurrentDoc) {
+        activityIndicator.startAnimating()
+        viewModel.search(for: text)
+    }
+    
+    func showDetailPageVC(_ doc:CurrentDoc) {
         let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "DetailView") as? DetailViewController
-           vc?.currentDoc = doc
+        vc?.currentDoc = doc
         self.navigationController?.pushViewController(vc!, animated: true)
-
-       }
-       
-       func reloadTableView() {
-           activityIndicator.stopAnimating()
-           self.articleTableView.reloadData()
-       }
+        
+    }
+    
+    func reloadTableView() {
+        activityIndicator.stopAnimating()
+        self.articleTableView.reloadData()
+    }
 }
 
 extension HomeViewController : UISearchBarDelegate {

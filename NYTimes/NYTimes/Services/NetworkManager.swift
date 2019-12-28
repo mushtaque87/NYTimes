@@ -10,7 +10,7 @@ import Foundation
 
 protocol SearchDelegate {
     func search(_ url: URL,
-                onSuccess successCompletionHandler: @escaping ([Docs]) -> Void)
+                onSuccess successCompletionHandler: @escaping ([Docs]) -> Void, onFailure: @escaping(Error) -> Void)
     
 }
 
@@ -24,20 +24,26 @@ class NetworkManager : NSObject , SearchDelegate {
     }
     
     func search(_ url: URL,
-                onSuccess successCompletionHandler: @escaping ([Docs]) -> Void) {
+                onSuccess successCompletionHandler: @escaping ([Docs]) -> Void,
+                onFailure: @escaping(Error) -> Void) {
         
-          httpClient.get(url: url) { (data , response , error) in
-            
-            do {
-                let articles : Article = try JSONDecoder.decodeData(data, of: Article.self) as! Article
+        httpClient.get(url: url) { (data , response , error) in
+            if error != nil  {
+                onFailure(error!)
+            } else {
+                
+                do {
+                    let articles : Article = try CustomDecoder.decodeData(data, of: Article.self) as! Article
+                    
                     if let docs = articles.response?.docs {
-                                                  successCompletionHandler(docs)
-                        }
-                   } catch  {
-                       print("Throwable Error \(error)")
-                     
-                   }
+                        successCompletionHandler(docs)
+                    }
+                } catch  {
+                    print("Throwable Error \(error)")
+                    
+                }
+            }
         }
-    
+        
     }
 }

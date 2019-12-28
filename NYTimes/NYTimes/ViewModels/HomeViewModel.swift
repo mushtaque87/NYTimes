@@ -12,7 +12,7 @@ import UIKit
 
 
 class HomeViewModel : NSObject {
-
+    
     let networkManager : NetworkManager
     let dataManager : Datamanager
     weak var delegate: HomeVCDelegate?
@@ -30,11 +30,13 @@ class HomeViewModel : NSObject {
     func search(for text:String) {
         let url = generateURL(with: text)
         self.networkManager.search(url , onSuccess: { docs in
-          
+            
             self.dataManager.appendData(with: docs)
-             DispatchQueue.main.async {
+            DispatchQueue.main.async {
                 self.delegate?.reloadTableView()
             }
+        }, onFailure: { error in
+            print("Error \(error)")
         })
     }
     
@@ -49,9 +51,9 @@ extension HomeViewModel : UITableViewDelegate , UITableViewDataSource {
         return 100 // The cell has to be dynamic based on the asbtract text count.
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       return self.dataManager.getDocCount()
+        return self.dataManager.getDocCount()
     }
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "articleCell", for: indexPath) as! ArticleTableViewCell
         if let doc = self.dataManager.getDoc(for: indexPath.row) {

@@ -12,21 +12,25 @@ protocol URLSessionProtocol {
     init(session: URLSession)
 }
 
-class HttpClient : URLSession {
+class HttpClient  {
     
     typealias completeClosure = ( _ data: Data? ,_ response: URLResponse?, _ error: Error?)->Void
-    private let session: URLSession
     
-    required init(session: URLSession) {
+    let session: DHURLSession
+    
+    required init(session: DHURLSession) {
         self.session = session 
-       }
+    }
     
     func get( url: URL, callback: @escaping completeClosure ) {
         let request = NSMutableURLRequest(url: url)
+        
         request.httpMethod = "GET"
+        
         let task = self.session.dataTask(with: url) {(data, response, error) in
             callback(data, response , error)
         }
+        
         print("taskResume")
         task.resume()
     }

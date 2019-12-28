@@ -18,25 +18,25 @@ class DetailViewController: UIViewController , UIWebViewDelegate , WKNavigationD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
-       print(currentDoc?.currentDoc?.web_url)
+        print(currentDoc?.currentDoc?.web_url)
         let request = URLRequest(url: URL(string: (currentDoc?.currentDoc?.web_url)!)!)
         webView.navigationDelegate = self
         webView.load(request)
     }
     
     
-
-
+    
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }

@@ -19,7 +19,7 @@ struct CurrentDoc {
 }
 
 protocol DataDelegate {
-
+    
     associatedtype D
     var docs : [D] {get set}
     func appendData(with data:[D])
@@ -33,7 +33,7 @@ protocol DataDelegate {
 }
 
 class Datamanager : NSObject , DataDelegate {
-  
+    
     
     typealias D = Docs
     var docs = [Docs]()
@@ -42,7 +42,7 @@ class Datamanager : NSObject , DataDelegate {
     override init() {
         super.init()
     }
-
+    
     
     func appendData(with data: [Docs]) {
         self.docs.append(contentsOf: data)
@@ -63,7 +63,7 @@ class Datamanager : NSObject , DataDelegate {
     }
     
     func getCurrentDoc() -> CurrentDoc {
-          return CurrentDoc(currentIndex: currentIndex, currentDoc: getDoc(for: currentIndex))
+        return CurrentDoc(currentIndex: currentIndex, currentDoc: getDoc(for: currentIndex))
     }
     func setCurrentIndex(_ index: Int) {
         self.currentIndex = index
@@ -72,7 +72,7 @@ class Datamanager : NSObject , DataDelegate {
         switch moveTo {
         case .next:
             guard currentIndex == self.docs.count else {
-                          return
+                return
             }
             currentIndex += 1
             
