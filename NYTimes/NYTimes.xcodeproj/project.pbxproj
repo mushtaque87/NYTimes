@@ -28,6 +28,7 @@
 		6463FB5D23B213FC00092562 /* articles.json in Resources */ = {isa = PBXBuildFile; fileRef = 6463FB5C23B213FC00092562 /* articles.json */; };
 		6463FB6123B23CAB00092562 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6463FB6023B23CAB00092562 /* Helper.swift */; };
 		6463FB6323B23E8700092562 /* CustomDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6463FB6223B23E8700092562 /* CustomDecoder.swift */; };
+		6468987823B8BDE700C43340 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6468987723B8BDE700C43340 /* UserDefaults.swift */; };
 		647555BE23AF4DE200798F8F /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647555BC23AF4DE200798F8F /* ArticleTableViewCell.swift */; };
 		647555BF23AF4DE200798F8F /* ArticleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 647555BD23AF4DE200798F8F /* ArticleTableViewCell.xib */; };
 		647555C323AF515A00798F8F /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647555C223AF515A00798F8F /* DataManager.swift */; };
@@ -73,6 +74,7 @@
 		6463FB5C23B213FC00092562 /* articles.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = articles.json; sourceTree = "<group>"; };
 		6463FB6023B23CAB00092562 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		6463FB6223B23E8700092562 /* CustomDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDecoder.swift; sourceTree = "<group>"; };
+		6468987723B8BDE700C43340 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		647555BC23AF4DE200798F8F /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
 		647555BD23AF4DE200798F8F /* ArticleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleTableViewCell.xib; sourceTree = "<group>"; };
 		647555C223AF515A00798F8F /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 				6462866A23AE502D00A26F49 /* Constants.swift */,
 				6462868023AE886B00A26F49 /* Environment.swift */,
 				6463FB6023B23CAB00092562 /* Helper.swift */,
+				6468987723B8BDE700C43340 /* UserDefaults.swift */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -377,6 +380,7 @@
 				6462868123AE886B00A26F49 /* Environment.swift in Sources */,
 				6462864523ADE7C200A26F49 /* NYTimes.xcdatamodeld in Sources */,
 				6462868C23AE914D00A26F49 /* Response.swift in Sources */,
+				6468987823B8BDE700C43340 /* UserDefaults.swift in Sources */,
 				6462863B23ADE7C200A26F49 /* AppDelegate.swift in Sources */,
 				6462863D23ADE7C200A26F49 /* SceneDelegate.swift in Sources */,
 				6462866B23AE502D00A26F49 /* Constants.swift in Sources */,
